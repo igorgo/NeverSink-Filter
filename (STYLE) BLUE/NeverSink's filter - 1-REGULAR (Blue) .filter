@@ -490,8 +490,6 @@ Show #$trinkets %D1
 #------------------------------------
 #   [0211] Warband items
 #------------------------------------
-# This section handles warband items, with special warband mods.
-# We're showing identified items of the right level, this may cause the filter to highlight a few other items
 # If you want to see the other items: click alt.
 
 Show # %D2 %TC-Ele-Warband-Bases
@@ -554,7 +552,18 @@ Show #$chisel, recipes %TB-Gavels %D3
 	Rarity < Unique
 	SetFontSize 38
 	SetBorderColor 250 250 250           # BORDERCOLOR:	 Recipes: top component / very strong Leveling highlight
-	SetBackgroundColor 75 75 75          # BACKGROUND:	 Recipes
+	SetBackgroundColor 0 107 48          # BACKGROUND:	 Recipes
+	PlayAlertSound 9 300
+
+Show #$chisel, recipes %TB-Gavels %D3
+	Quality = 20
+	BaseType "Gavel" "Rock Breaker" "Stone Hammer"
+	Rarity Normal
+	SetFontSize 38
+	SetTextColor 255 255 255 255         # TEXTCOLOR:	 Normal Items: Strong Highlight
+	SetBorderColor 250 250 250           # BORDERCOLOR:	 Recipes: top component / very strong leveling highlight
+	SetBackgroundColor 0 107 48          # BACKGROUND:	 Recipes
+	PlayAlertSound 9 300
 
 Show #$chisel, recipes %TB-Gavels %D3
 	Quality > 17
@@ -562,7 +571,8 @@ Show #$chisel, recipes %TB-Gavels %D3
 	Rarity Magic
 	SetFontSize 36
 	SetBorderColor 150 150 150           # BORDERCOLOR:	 Rares - Size - Small (+Good basetype), Recipe: small/high qual
-	SetBackgroundColor 75 75 75          # BACKGROUND:	 Recipes
+	SetBackgroundColor 0 107 48          # BACKGROUND:	 Recipes
+	PlayAlertSound 9 300
 
 Show #$chisel, recipes %TB-Gavels %D3
 	Quality > 14
@@ -570,7 +580,8 @@ Show #$chisel, recipes %TB-Gavels %D3
 	Rarity Normal
 	SetFontSize 36
 	SetBorderColor 150 150 150           # BORDERCOLOR:	 Rares - Size - Small (+Good basetype), Recipe: small/high qual
-	SetBackgroundColor 75 75 75          # BACKGROUND:	 Recipes
+	SetBackgroundColor 0 107 48          # BACKGROUND:	 Recipes
+	PlayAlertSound 9 300
 
 Show #$chisel, recipes %TB-Gavels %D2
 	Quality > 11
@@ -578,14 +589,16 @@ Show #$chisel, recipes %TB-Gavels %D2
 	Rarity Magic
 	SetFontSize 32
 	SetBorderColor 0 0 0                 # BORDERCOLOR:	 Cosmetic: Neutral Highlight
-	SetBackgroundColor 75 75 75          # BACKGROUND:	 Recipes
+	SetBackgroundColor 0 107 48          # BACKGROUND:	 Recipes
+	PlayAlertSound 9 300
 
 Show #$chisel, recipes %TB-Gavels %D2
 	BaseType "Gavel" "Rock Breaker" "Stone Hammer"
 	Rarity Normal
 	SetFontSize 32
 	SetBorderColor 0 0 0                 # BORDERCOLOR:	 Cosmetic: Neutral Highlight
-	SetBackgroundColor 75 75 75          # BACKGROUND:	 Recipes
+	SetBackgroundColor 0 107 48          # BACKGROUND:	 Recipes
+	PlayAlertSound 9 300
 
 #------------------------------------
 #   [0214] Fishing Rod
@@ -755,7 +768,8 @@ Show # %H5 %TB-Currency-T4
 	SetFontSize 42
 	SetTextColor 210 178 135 255         # TEXTCOLOR:	 Low currency T1
 	SetBorderColor 213 159 100 200       # BORDERCOLOR:	 T1 LOW currency
-	SetBackgroundColor 0 0 0 255         # BACKGROUND:	 T6-10 maps, currency, talismans
+	SetBackgroundColor 100 30 30 255     # BACKGROUND:	 T6-10 maps, currency, talismans
+	PlayAlertSound 1 300
 
 Show # %H4 %TB-Currency-T5
 	Class Currency
@@ -1030,11 +1044,12 @@ Show #$trinkets, jewels, tiny %TC-Rare-Jewels
 Show #$great, tiny %TC-Rare-Trinkets %UP %D5
 	Class Rings Amulets Belts
 	Rarity Rare
-	ItemLevel >= 75
-	SetFontSize 42
+	ItemLevel >= 60
+	SetFontSize 44
 	SetTextColor 255 190 0               # TEXTCOLOR:	 Rares - Level - 75+
 	SetBorderColor 25 235 25 255         # BORDERCOLOR:	 Rares - Size - Tiny, special base
 	SetBackgroundColor 0 40 70 255       # BACKGROUND:	 Rares - T1
+	PlayAlertSound 1 300                 # DROPSOUND:	 Value Drop: Currency, fragments
 
 Show
 	Class Rings Amulets Belts
@@ -1816,6 +1831,7 @@ Show # %H5
 	Class Gems
 	SetFontSize 40
 	SetBorderColor 30 150 180 150        # BORDERCOLOR:	 T2 Gems
+	PlayAlertSound 1 300                 # DROPSOUND:	 Value Drop: Currency, fragments
 
 Show # Drop only meh gems %TB-DropOnly-Gem %D5
 	Class Gems
@@ -1839,16 +1855,25 @@ Show #$flask, recipe, glass, top
 	ItemLevel <= 65
 	SetFontSize 42
 	SetBorderColor 250 250 250           # BORDERCOLOR:	 Recipes: top component / very strong Leveling highlight
-	SetBackgroundColor 75 75 75          # BACKGROUND:	 Recipes
+	SetBackgroundColor 115 0 0           # BACKGROUND:	 Recipes
 
-Show #$flask, recipe, glass
+Show #$flask, recipe, glass, top %H4
+	Quality = 20
+	BaseType "Flask"
+	Rarity Magic
+	SetFontSize 38
+	SetTextColor 100 100 255 255         # TEXTCOLOR: Magic Items: Strong Highlight
+	SetBorderColor 250 250 250           # BORDERCOLOR:	 Recipes: top component / very strong leveling highlight
+	SetBackgroundColor 115 0 0           # BACKGROUND:	 Recipes
+
+Show #$flask, recipe, glass %H4
 	Quality >= 15
 	BaseType "Flask"
 	Rarity <= Magic
 	ItemLevel <= 65
 	SetFontSize 42
 	SetBorderColor 150 150 150           # BORDERCOLOR:	 Rares - Size - Small (+Good basetype), Recipe: small/high qual
-	SetBackgroundColor 75 75 75          # BACKGROUND:	 Recipes
+	SetBackgroundColor 115 0 0           # BACKGROUND:	 Recipes
 
 Show #$flask, utility, lvl, top %TB-T1-Leveling-Flask
 	Quality >= 1
@@ -1858,7 +1883,7 @@ Show #$flask, utility, lvl, top %TB-T1-Leveling-Flask
 	ItemLevel <= 65
 	SetFontSize 45
 	SetBorderColor 250 250 250           # BORDERCOLOR:	 Recipes: top component / very strong Leveling highlight
-	SetBackgroundColor 75 75 75          # BACKGROUND:	 Recipes
+	SetBackgroundColor 115 0 0           # BACKGROUND:	 Recipes
 
 Show #$flask, utility, lvl %TB-T1-Leveling-Flask
 	BaseType "Quicksilver Flask" "Silver Flask" "Bismuth Flask" "Basalt Flask" "Granite Flask" "Diamond Flask"
@@ -1868,12 +1893,44 @@ Show #$flask, utility, lvl %TB-T1-Leveling-Flask
 	SetBorderColor 150 150 150           # BORDERCOLOR:	 Rares - Size - Small (+Good basetype), Recipe: small/high qual
 	SetBackgroundColor 75 75 75          # BACKGROUND:	 Recipes
 
+Show #$flask, recipe, glass %D2
+	Quality >= 15
+	BaseType "Flask"
+	Rarity <= Magic
+	SetFontSize 38
+	SetBorderColor 150 150 150           # BORDERCOLOR:	 Rares - Size - Small (+Good basetype), Recipe: small/high qual
+	SetBackgroundColor 115 0 0           # BACKGROUND:	 Recipes
+
 Show #$flask, recipe, glass
 	Quality > 1
 	BaseType "Flask"
 	Rarity <= Magic
 	ItemLevel <= 65
 	SetFontSize 40
+	SetBorderColor 0 0 0                 # BORDERCOLOR:	 Cosmetic: Neutral Highlight
+	SetBackgroundColor 115 0 0           # BACKGROUND:	 Recipes
+
+Show #$flask, recipe, glass %D2
+	Quality >= 1
+	BaseType "Flask"
+	Rarity <= Magic
+	SetBorderColor 0 0 0                 # BORDERCOLOR:	 Cosmetic: Neutral Highlight
+	SetBackgroundColor 115 0 0           # BACKGROUND:	 Recipes
+
+Show #$flask, utility, lvl %TB-T1-Leveling-Flask
+	BaseType "Stibnite Flask" "Sapphire Flask" "Silver Flask" "Granite Flask" "Quicksilver Flask"  "Bismuth Flask" "Basalt Flask" 
+	Rarity <= Magic
+	ItemLevel < 60
+	SetFontSize 40
+	SetBorderColor 255 255 0 255         # BORDERCOLOR:	 Crafting: T1
+	SetBackgroundColor 75 75 75          # BACKGROUND:	 Recipes
+	PlayAlertSound 2 300                 # DROPSOUND:	 Value Drop: Currency, fragments
+
+	
+Show #$flask, utility %D2
+	Class "Utility Flasks"
+	Rarity <= Magic
+	ItemLevel > 66
 	SetBorderColor 0 0 0                 # BORDERCOLOR:	 Cosmetic: Neutral Highlight
 	SetBackgroundColor 75 75 75          # BACKGROUND:	 Recipes
 
