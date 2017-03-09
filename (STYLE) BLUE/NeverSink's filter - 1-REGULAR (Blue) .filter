@@ -147,6 +147,96 @@
 # [[0100]] OVERRIDE AREA 1 - Override ALL rules here (includes 6links etc, be careful)
 #===============================================================================================================
 
+#------------------------------------
+#   [0100-0212] Chisel recipe items
+#------------------------------------
+# Chisel Recipe: You can sell a 20% hammer + random map for 1 chisel
+
+Show #$chisel, recipes %TB-Gavels %D3
+	Quality = 20
+	BaseType "Gavel" "Rock Breaker" "Stone Hammer"
+	Rarity <= Rare
+	SetFontSize 38
+	SetTextColor 255 255 0 225			 # TEXTCOLOR:	 Hammers High
+	SetBorderColor 50 50 50 255          # BORDERCOLOR:	 Hammers
+	SetBackgroundColor 42 196 96 225     # BACKGROUND:	 Hammers
+
+Show #$chisel, recipes %TB-Gavels %D2
+	Quality > 11
+	BaseType "Gavel" "Rock Breaker" "Stone Hammer"
+	Rarity Magic
+	SetFontSize 32
+	SetTextColor 255 255 255 225         # TEXTCOLOR:	 Early Leveling: Neutral 3Ls
+	SetBorderColor 50 50 50 255          # BORDERCOLOR:	 Hammers
+	SetBackgroundColor 42 196 96 225     # BACKGROUND:	 Hammers
+
+Show #$chisel, recipes %TB-Gavels %D2
+	BaseType "Gavel" "Rock Breaker" "Stone Hammer"
+	Rarity Normal
+	SetFontSize 32
+	SetTextColor 255 255 255 225         # TEXTCOLOR:	 Early Leveling: Neutral 3Ls
+	SetBorderColor 50 50 50 255          # BORDERCOLOR:	 Hammers
+	SetBackgroundColor 42 196 96 225     # BACKGROUND:	 Hammers
+
+
+#===============================================================================================================
+# [[0100-0400]] Currency - PART 1 - Common currency
+#===============================================================================================================
+# We'll keep this section up here to boost the performance.
+
+Show # %TB-Currency-T4
+	Class Currency
+	BaseType "Orb of Chance" "Orb of Alteration" "Chromatic Orb" "Jeweller's Orb"
+	SetFontSize 40
+	SetTextColor 210 178 135 255         # TEXTCOLOR:	 Low currency T1
+	SetBorderColor 231 159 100 200		 # BORDERCOLOR:	 T1 LOW currency
+	SetBackgroundColor 166 36 136 255    # BACKGROUND:	 T6-10 maps, currency, talismans
+	PlayAlertSound 1 300
+
+Show # %TB-Currency-T5
+	Class Currency
+	BaseType "Orb of Transmutation" "Blacksmith's" "Orb of Augmentation"
+	SetBorderColor 190 178 135 110       # BORDERCOLOR:	 T2 LOW currency
+	SetBackgroundColor 166 36 136 255    # BACKGROUND:	 T6-10 maps, currency, talismans
+
+Show # %H3 %TB-Currency-T7
+	Class Currency
+	BaseType "Armourer's" "Portal Scroll" "Scroll of Wisdom"
+	SetTextColor 170 158 130 220         # TEXTCOLOR:	 Low currency T3
+	SetBorderColor 60 50 30 255          # BORDERCOLOR:	 T3 LOW currency
+	SetBackgroundColor 0 0 0 255         # BACKGROUND:	 T6-10 maps, currency, talismans
+	
+#------------------------------------
+#   [0206] Chancing items
+#------------------------------------
+# You can add your own items here. The items in this section have a dropsound
+
+# LEGACY UNIQUES: THESE UNIQUES CAN ONLY BE CHANCED IN THE CORRECT ZANA-LEAGUE MODS
+# Agate Amulet - ANARCHY ONLY - can be chance to voll's in anarchy maps
+# Leather belt - NEMESIS only - can be chanced into a headhunter belt!
+
+# EXAMPLE OF NON LEGACY UNIQUES:
+# Prophecy wand - Void Battery
+# Judgement Staff - Hegemony's/Pledge of Hands
+
+# TO ADD AN ITEM ATTACH IT'S NAME TO THE BASAETYPE'S IN ONE OF THE 2 ENTRIES BELOW.
+# Example, to add Agate amulet:
+# BaseType "Sorcerer Boots" "Agate Amulet"
+
+Show #$chancing (with sound) %TB-T1-Chancing %D4
+	BaseType "Sorcerer Boots" "Leather Belt"
+	Rarity Normal
+	SetFontSize 38
+	SetTextColor 255 255 255 255         # TEXTCOLOR:	 Normal Items: Strong Highlight
+	SetBorderColor 0 210 0 210           # BORDERCOLOR:	 T1 Chancing
+	PlayAlertSound 7 300                 # DROPSOUND:	 T1 chancing items
+
+Show #$chancing (no sound) %TB-T2-Chancing %D1
+	BaseType "Occultist's Vestment" "Prophecy Wand" "Goathide Boots"
+	Rarity Normal
+	SetTextColor 255 255 255 255         # TEXTCOLOR:	 Normal Items: Strong Highlight
+	SetBorderColor 0 150 0 150           # BORDERCOLOR:	 T2 Chancing
+	
 #===============================================================================================================
 # [[0200]] Recipes, Magic and Normal items (endgame!)
 #===============================================================================================================
@@ -716,6 +806,28 @@ Show # %H3 %TB-Currency-T7
 #===============================================================================================================
 # [[0500]] OVERRIDE AREA 2 - Override the default rare rulesets here
 #===============================================================================================================
+#------------------------------------
+#   [0500-0607] Amulets, Jewels, Rings, Belts
+#------------------------------------
+
+Show #$great, tiny %TC-Rare-Trinkets
+	Class Rings Amulets Belts
+	Rarity Rare
+	ItemLevel >= 75
+	SetFontSize 44
+	SetTextColor 255 190 0               # TEXTCOLOR:	 Rares - Level - 75+
+	SetBorderColor 255 0 0 255           # BORDERCOLOR:	 Rares - Size - Tiny, special base
+	SetBackgroundColor 0 40 70 255       # BACKGROUND:	 Rares - Basetype - Great
+	PlayAlertSound 1 300                 # DROPSOUND:	 Value Drop: Currency, fragments
+
+Show #$great, tiny %TC-Rare-Trinkets
+	Class Rings Amulets Belts
+	Rarity Rare
+	ItemLevel >= 60
+	SetFontSize 44
+	SetBorderColor 255 0 0 255           # BORDERCOLOR:	 Rares - Size - Tiny, special base
+	SetBackgroundColor 0 40 70 255       # BACKGROUND:	 Rares - Basetype - Great
+	PlayAlertSound 1 300                 # DROPSOUND:	 Value Drop: Currency, fragments
 
 #===============================================================================================================
 # [[0600]] RARE ITEMS (ENDGAME)
@@ -1851,6 +1963,55 @@ Hide # Hide remaining rare endgame items (note: on the regular version this line
 #===============================================================================================================
 # [[0800]] OVERRIDE AREA 3 - Override Map, Gem and Flask drops here
 #===============================================================================================================
+#------------------------------------
+#   [0800-0902] Other gems
+#------------------------------------
+
+Show
+	Quality >= 1
+	Class Gems
+	SetFontSize 40
+	SetBorderColor 30 150 180 150        # BORDERCOLOR:	 T2 Gems
+	PlayAlertSound 1 300                 # DROPSOUND:	 Value Drop: Currency, fragments
+	
+#===============================================================================================================
+# [[1000]] FLASKS (Endgame rules)
+#===============================================================================================================
+
+Show #$flask, utility %D2
+	Class "Utility Flasks"
+	Quality = 20
+	Rarity <= Magic
+	SetTextColor 255 255 0 225			 # TEXTCOLOR:	 Hammers High
+	SetBorderColor 50 50 50 255          # BORDERCOLOR:	 Hammers
+	SetBackgroundColor 42 196 96 225     # BACKGROUND:	 Hammers
+
+Show #$flask, recipe, glass, top %H4
+	Quality = 20
+	BaseType "Flask"
+	Rarity Normal
+	SetFontSize 38
+	SetTextColor 255 255 255 225         # TEXTCOLOR:	 Early Leveling: Neutral 3Ls
+	SetBorderColor 50 50 50 255          # BORDERCOLOR:	 Hammers
+	SetBackgroundColor 42 196 96 225     # BACKGROUND:	 Hammers
+
+Show #$flask, utility, lvl %TB-T1-Leveling-Flask
+	BaseType "Stibnite Flask" "Sapphire Flask" "Silver Flask" "Granite Flask" "Quicksilver Flask" "Bismuth Flask" "Basalt Flask" 
+	Rarity <= Magic
+	SetFontSize 42
+	SetBorderColor 255 255 0 255         # BORDERCOLOR:	 Crafting: T1
+	SetBorderColor 0 210 00 210          # BORDERCOLOR:	 Hammers
+	SetBackgroundColor 75 75 75          # BACKGROUND:	 Recipes
+	PlayAlertSound 2 300                 # DROPSOUND:	 Value Drop: Currency, fragments
+
+Show #$flask, recipe, glass
+	Quality > 4
+	BaseType "Flask"
+	Rarity <= Magic
+	SetFontSize 38
+	SetTextColor 0 0 0 225		         # TEXTCOLOR:	 Early Leveling: Neutral 3Ls
+	SetBorderColor 50 50 50 255          # BORDERCOLOR:	 Hammers
+	SetBackgroundColor 42 196 96 225     # BACKGROUND:	 Hammers
 
 #===============================================================================================================
 # [[0900]] Gems
