@@ -159,7 +159,7 @@ Show #$chisel, recipes %TB-Gavels %D3
 	SetFontSize 38
 	SetTextColor 255 255 0 225			 # TEXTCOLOR:	 Hammers High
 	SetBorderColor 50 50 50 255          # BORDERCOLOR:	 Hammers
-	SetBackgroundColor 42 196 96 225     # BACKGROUND:	 Hammers
+	SetBackgroundColor 68 104 207 225     # BACKGROUND:	 Hammers
 
 Show #$chisel, recipes %TB-Gavels %D2
 	Quality > 11
@@ -168,7 +168,7 @@ Show #$chisel, recipes %TB-Gavels %D2
 	SetFontSize 32
 	SetTextColor 255 255 255 225         # TEXTCOLOR:	 Early Leveling: Neutral 3Ls
 	SetBorderColor 50 50 50 255          # BORDERCOLOR:	 Hammers
-	SetBackgroundColor 42 196 96 225     # BACKGROUND:	 Hammers
+	SetBackgroundColor 68 104 207 225     # BACKGROUND:	 Hammers
 
 Show #$chisel, recipes %TB-Gavels %D2
 	BaseType "Gavel" "Rock Breaker" "Stone Hammer"
@@ -176,7 +176,7 @@ Show #$chisel, recipes %TB-Gavels %D2
 	SetFontSize 32
 	SetTextColor 255 255 255 225         # TEXTCOLOR:	 Early Leveling: Neutral 3Ls
 	SetBorderColor 50 50 50 255          # BORDERCOLOR:	 Hammers
-	SetBackgroundColor 42 196 96 225     # BACKGROUND:	 Hammers
+	SetBackgroundColor 68 104 207 225     # BACKGROUND:	 Hammers
 
 
 #===============================================================================================================
@@ -188,16 +188,17 @@ Show # %TB-Currency-T4
 	Class Currency
 	BaseType "Orb of Chance" "Orb of Alteration" "Chromatic Orb" "Jeweller's Orb"
 	SetFontSize 40
-	SetTextColor 210 178 135 255         # TEXTCOLOR:	 Low currency T1
+	SetTextColor 175 96 37 255           # TEXTCOLOR:	 Low currency T1
 	SetBorderColor 231 159 100 200		 # BORDERCOLOR:	 T1 LOW currency
-	SetBackgroundColor 166 36 136 255    # BACKGROUND:	 T6-10 maps, currency, talismans
+	SetBackgroundColor 255 255 119 255   # BACKGROUND:	 Low currency T1
 	PlayAlertSound 1 300
 
 Show # %TB-Currency-T5
 	Class Currency
 	BaseType "Orb of Transmutation" "Blacksmith's" "Orb of Augmentation"
+	SetTextColor 0 0 0 255           	 # TEXTCOLOR:	 Low currency T2
 	SetBorderColor 190 178 135 110       # BORDERCOLOR:	 T2 LOW currency
-	SetBackgroundColor 166 36 136 255    # BACKGROUND:	 T6-10 maps, currency, talismans
+	SetBackgroundColor 255 255 119 255   # BACKGROUND:	 Low currency T1
 
 Show # %H3 %TB-Currency-T7
 	Class Currency
@@ -1984,7 +1985,7 @@ Show #$flask, utility %D2
 	Rarity <= Magic
 	SetTextColor 255 255 0 225			 # TEXTCOLOR:	 Hammers High
 	SetBorderColor 50 50 50 255          # BORDERCOLOR:	 Hammers
-	SetBackgroundColor 42 196 96 225     # BACKGROUND:	 Hammers
+	SetBackgroundColor 68 104 207 225     # BACKGROUND:	 Hammers
 
 Show #$flask, recipe, glass, top %H4
 	Quality = 20
@@ -1993,7 +1994,7 @@ Show #$flask, recipe, glass, top %H4
 	SetFontSize 38
 	SetTextColor 255 255 255 225         # TEXTCOLOR:	 Early Leveling: Neutral 3Ls
 	SetBorderColor 50 50 50 255          # BORDERCOLOR:	 Hammers
-	SetBackgroundColor 42 196 96 225     # BACKGROUND:	 Hammers
+	SetBackgroundColor 68 104 207 225     # BACKGROUND:	 Hammers
 
 Show #$flask, utility, lvl %TB-T1-Leveling-Flask
 	BaseType "Stibnite Flask" "Sapphire Flask" "Silver Flask" "Granite Flask" "Quicksilver Flask" "Bismuth Flask" "Basalt Flask" 
@@ -2011,7 +2012,7 @@ Show #$flask, recipe, glass
 	SetFontSize 38
 	SetTextColor 0 0 0 225		         # TEXTCOLOR:	 Early Leveling: Neutral 3Ls
 	SetBorderColor 50 50 50 255          # BORDERCOLOR:	 Hammers
-	SetBackgroundColor 42 196 96 225     # BACKGROUND:	 Hammers
+	SetBackgroundColor 68 104 207 225     # BACKGROUND:	 Hammers
 
 #===============================================================================================================
 # [[0900]] Gems
