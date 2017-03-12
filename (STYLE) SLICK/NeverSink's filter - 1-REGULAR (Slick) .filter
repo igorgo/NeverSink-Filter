@@ -379,6 +379,12 @@ Show #$chancing (no sound) %TB-T2-Chancing %D4
 	SetTextColor 255 255 255 255         # TEXTCOLOR:	 Normal Items: Strong Highlight
 	SetBorderColor 0 150 0 150           # BORDERCOLOR:	 T2 Chancing
 
+Show #$chancing (no sound) %TB-T2-Chancing %D4
+	BaseType "Leather Belt"
+	Rarity Normal
+	SetTextColor 255 255 255 255         # TEXTCOLOR:	 Normal Items: Strong Highlight
+	SetBorderColor 0 150 0 150           # BORDERCOLOR:	 T2 Chancing
+
 Show #$chancing (no sound) %TB-T2-Chancing %D1
 	BaseType "Occultist's Vestment" "Prophecy Wand" "Goathide Boots" "Sorcerer Boots" "Glorious Plate"
 	Rarity Normal
@@ -2689,6 +2695,33 @@ Show # %TB-Uniques-T1
 	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T1 Global High Value Drop
 	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
 
+Show # %TB-Uniques-T1-Wep
+	BaseType "Void Axe" "Prophecy Wand" "Jewelled Foil" "Royal Axe" "Cutlass"
+	Rarity Unique
+	SetFontSize 45
+	SetTextColor 175 96 37 255           # TEXTCOLOR:	 Uniques
+	SetBorderColor 175 96 37 255         # BORDERCOLOR:	 Unique Item
+	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T1 Global High Value Drop
+	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
+
+Show # %TB-Uniques-T1-Arm
+	BaseType "Sorcerer Boots" "Occultist's Vestment" "Crusader Boots" "Rawhide Boots" "Ezomyte Tower Shield" "Deicide Mask" "Glorious Plate" "Ezomyte Burgonet" "Assassin's Garb"
+	Rarity Unique
+	SetFontSize 45
+	SetTextColor 175 96 37 255           # TEXTCOLOR:	 Uniques
+	SetBorderColor 175 96 37 255         # BORDERCOLOR:	 Unique Item
+	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T1 Global High Value Drop
+	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
+
+Show # %TB-Uniques-T1-Misc
+	BaseType "Greatwolf Talisman"
+	Rarity Unique
+	SetFontSize 45
+	SetTextColor 175 96 37 255           # TEXTCOLOR:	 Uniques
+	SetBorderColor 175 96 37 255         # BORDERCOLOR:	 Unique Item
+	SetBackgroundColor 255 255 255 255   # BACKGROUND:	 T1 Global High Value Drop
+	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
+
 #------------------------------------
 #   [1703] Tier 2 uniques
 #------------------------------------
@@ -2706,6 +2739,33 @@ Show # %TB-Uniques-T2
 	BaseType "Abyssal Axe" "Archon Kite Shield Piece" "Assassin's Garb" "Blunt Arrow Quiver Piece" "Callous Mask Piece" "Carnal Sceptre" "Champion Kite Shield" "Citrine Amulet" "Cloth Belt Piece" "Corrugated Buckler" "Crystal Belt" "Deicide Mask" "Exquisite Leather" "Ezomyte Burgonet" "Highborn Staff" "Imperial Skean" "Imperial Staff" "Judgement Staff" "Maelström Staff" "Mosaic Kite Shield" "Nightmare Bascinet" "Rawhide Tower Shield" "Sacrificial Garb" "Sacrificial Garb" "Stibnite Flask" "Terror Maul" "Ursine Pelt" "Vaal Axe" "Vaal Mask" "Vaal Sceptre" "Vanguard Belt" "Varnished Coat" "Wereclaw Talisman" "Wyrmscale Doublet"
 	Rarity Unique
 	SetFontSize 45
+	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
+	SetBorderColor 0 0 0 255             # BORDERCOLOR:	 Cosmetic: Highlight good drops
+	SetBackgroundColor 175 96 37 255     # BACKGROUND:	 T2 unique
+	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
+
+Show # %TB-Uniques-T2-Wep
+	BaseType "Granite Flask" "Fiend Dagger" "Imperial Staff" "Carnal Sceptre" "Siege Axe" "Abyssal Axe" "Sacrificial Garb" "Ritual Sceptre" "Judgement Staff" "Vaal Sceptre" "Imperial Maul" "Steelhead" "Carnal Sceptre" "Terror Maul"
+	Rarity Unique
+	SetFontSize 42
+	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
+	SetBorderColor 0 0 0 255             # BORDERCOLOR:	 Cosmetic: Highlight good drops
+	SetBackgroundColor 175 96 37 255     # BACKGROUND:	 T2 unique
+	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
+
+Show # %TB-Uniques-T2-Arm
+	BaseType "Jingling Spirit Shield" "Savant's Robe" "Gladiator Plate" "Vaal Regalia" "Sacrificial Garb" "Archon Kite Shield" "Legion Gloves" "Raven Mask" "Champion Kite Shield" "Nightmare Bascinet" "Clasped Mitts"
+	Rarity Unique
+	SetFontSize 42
+	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
+	SetBorderColor 0 0 0 255             # BORDERCOLOR:	 Cosmetic: Highlight good drops
+	SetBackgroundColor 175 96 37 255     # BACKGROUND:	 T2 unique
+	PlayAlertSound 6 300                 # DROPSOUND:	 T1 Drop
+
+Show # %TB-Uniques-T2-Misc
+	BaseType "Penetrating Arrow Quiver" "Two-Stone Ring" "Gold Ring" "Crystal Belt" "Citrine Amulet"
+	Rarity Unique
+	SetFontSize 42
 	SetTextColor 0 0 0 255               # TEXTCOLOR:	 Cosmetic: Black Text
 	SetBorderColor 0 0 0 255             # BORDERCOLOR:	 Cosmetic: Highlight good drops
 	SetBackgroundColor 175 96 37 255     # BACKGROUND:	 T2 unique
