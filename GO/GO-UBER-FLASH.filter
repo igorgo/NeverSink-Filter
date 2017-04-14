@@ -179,6 +179,12 @@ Show #$chisel, recipes %TB-Gavels %D2
 	SetBorderColor 50 50 50 255          # BORDERCOLOR:	 Hammers
 	SetBackgroundColor 68 104 207 225     # BACKGROUND:	 Hammers
 
+Show # %H3 %TB-Currency-T7
+	Class Currency
+	BaseType "Armourer's" "Portal Scroll" "Scroll of Wisdom"
+	SetTextColor 170 158 130 220         # TEXTCOLOR:	 Low currency T3
+	SetBorderColor 60 50 30 255          # BORDERCOLOR:	 T3 LOW currency
+	SetBackgroundColor 0 0 0 255         # BACKGROUND:	 T6-10 maps, currency, talismans
 
 #===============================================================================================================
 # [[0100-0400]] Currency - PART 1 - Common currency
